@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'multiselectfield',
     'user',
+    'rest_framework',
+    'swap'
 ]
 
 AUTH_USER_MODEL = 'user.CustomUser'
@@ -132,3 +134,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# Custom definitions
+AUTH_USER_MODEL = 'accounts.User' # app.model - User model path
+SKILL_MAX_LENGTH = 32 # Maximum length for the skill field

@@ -37,13 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
     'multiselectfield',
-    'user',
     'rest_framework',
-    'swap'
+
+    # - #
+    'swap',
+    'user',
 ]
 
 AUTH_USER_MODEL = 'user.CustomUser'
@@ -138,5 +139,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Custom definitions
-# AUTH_USER_MODEL = 'accounts.User' # app.model - User model path
 SKILL_MAX_LENGTH = 32 # Maximum length for the skill field

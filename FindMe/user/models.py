@@ -65,3 +65,5 @@ class CustomUser(AbstractUser):
     skills_offered = models.ManyToManyField(Skill, related_name="offered_by", blank=True)
     skills_wanted = models.ManyToManyField(Skill, related_name="wanted_by", blank=True)
     is_private = models.BooleanField(default=False)
+    total_ratings = models.IntegerField(default=0, verbose_name="Total number of ratings given to this user. While updating the ratings, when a new rating is recieved: 1. If total_ratings==0, rating=0. new_rating = (old_rating*old_total_rating+new_rating_recieved)/(old_total_rating+1)")
+    rating = models.FloatField(default=0, verbose_name="User rating")

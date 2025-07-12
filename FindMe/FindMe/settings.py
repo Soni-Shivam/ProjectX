@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'multiselectfield',
     'user',
-    'rest_framework',
-    'swap'
+    'swap',
 ]
 
 AUTH_USER_MODEL = 'user.CustomUser'
